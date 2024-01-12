@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "github.com/boywei/grpc-examples/zero/zero";
+
+service Game {
+    rpc PlayBall (BallRequest) returns (BallReply);
+}
+
+message BallRequest {
+    string name = 1;
+}
+
+message BallReply {
+    string reply = 1;
+}
